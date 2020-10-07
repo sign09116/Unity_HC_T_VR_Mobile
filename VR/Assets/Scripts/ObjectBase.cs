@@ -16,8 +16,8 @@ public class ObjectBase : MonoBehaviour
     public float delay = 0.1f;
 
     /// <summary> 喇叭</summary>
-    [SerializeField] protected AudioSource aud;
-    private void Reset()
+    protected AudioSource aud;
+    protected virtual void Awake()
     {
         aud = GetComponent<AudioSource>();
     }
